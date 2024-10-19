@@ -2,7 +2,7 @@
 
 
 ## Description
-This application is for users who want to identify BPM and Key for mixing or breaking down music to create remixes.
+This application is for users who want to identify BPM and Key for mixing or breaking down music.
 It uses your Spotify Developer API credentials to analyze a list of track names and retrieve their BPM and Key.
 Once the BPM and Key for the track are recieved from Spotify, the mp3 files in a given folder are renamed.
 
