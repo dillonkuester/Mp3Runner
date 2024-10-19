@@ -1,12 +1,7 @@
 ﻿using Mp3Runner.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mp3Runner.Classes
 {
@@ -47,7 +42,6 @@ namespace Mp3Runner.Classes
 
                 if (searchResponse.Tracks.Items.Length > 0)
                 {
-                    //First trackId that matches
                     return searchResponse.Tracks.Items[0].Id;
                 }
             }
@@ -84,7 +78,7 @@ namespace Mp3Runner.Classes
 
         public static string ExtractOriginalTrackName(string filePath)
         {
-            var originalFileName = Path.GetFileNameWithoutExtension(filePath); // Get the file name without the extension
+            var originalFileName = Path.GetFileNameWithoutExtension(filePath); 
             var cleanFileName = Helpers.RemoveExistingBpmKeyPrefix(originalFileName);
             return cleanFileName;
         }
